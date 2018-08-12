@@ -11,6 +11,14 @@
       <p> This website is made for Django Project </p>
     </div>
 
+    {% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h3><a href=" ">{{ post.title }}</a></h3>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+    {% endfor %}
+
     <div>
       <h3> Contact </h3>
       <p>sonyj97@gmail.com</p>
