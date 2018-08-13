@@ -11,13 +11,16 @@
   </head>
 
   <body>
-    <div class="page-header">
-        <h1><a href="http://github.com/sonyj-work"> Owner's Github</a></h1>
-    </div>
+      <div class="page-header">
+        {% if user.is_authenticated %}
+          <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
+          <h1><a href="http://github.com/sonyj-work"> Owner's Github</a></h1>
+      </div>
 
-    <div class="page-exp">
-      <p> This website is made for Django Project </p>
-    </div>
+      <div class="page-exp">
+        <p> This website is made for Django Project </p>
+      </div>
 
 
 <div class="content container">
